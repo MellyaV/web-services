@@ -1,4 +1,4 @@
-<?php
+ <?php
  /**
  * api.php is a sample API file to be called via AJAX to 
  * deliver the contents of 2 JSON files, one of which orders the 
@@ -28,11 +28,11 @@ if(isset($_REQUEST['cat']))
 {//check to be sure data has been transmitted via GET or POST
 	switch($_REQUEST['cat'])
 	{//determine contents of 'cat'
-		case "box":
-			include('data/bond-box-office.js'); //"box" orders by box office results
+		case "ranking":
+			include('data/tyler-ranking.js'); //"box" orders by box office results
 			break;
 		default:
-			include('data/bond-year.js'); //default orders by year
+			include('data/tyler-year.js'); //default orders by year
 	}
 }else{//if not data sent, inform calling application
 	echo "Incorrect parameter sent";
